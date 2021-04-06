@@ -1,0 +1,27 @@
+#include<iostream>
+#include<vector>
+
+using namespace std;
+
+
+string genTheStr(int n) {
+    string s="";
+    if(n%2==0)
+    {
+        s+="a";
+        n--;
+    }
+    while(n--)
+        s+="b";   
+    return s;       
+}
+
+int main(){
+    cout<<"Enter the number elements required"<<endl;
+    int n;
+    cin>>n;
+    cout<<genTheStr(n)<<endl;
+
+
+    return 0;
+}
