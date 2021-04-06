@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+  
+class Solution {
+    public:
+    int maxDepth(string s)
+    {
+        int count=0, ans=0;
+        
+        for(auto c:s)
+        {
+            if(c=='(')
+            {
+                count++;
+                ans=max(ans,count);
+            }
+            else if(c==')')
+            count--;
+        }
+        return ans;
+    }
+};
